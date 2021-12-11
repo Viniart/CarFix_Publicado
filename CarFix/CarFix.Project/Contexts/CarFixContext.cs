@@ -100,8 +100,8 @@ namespace CarFix.Project.Contexts
 
             modelBuilder.Entity<Budget>()
                 .HasOne<Vehicle>(u => u.Vehicle)
-                .WithOne(b => b.Budget)
-                .HasForeignKey<Budget>(f => f.IdVehicle);
+                .WithMany(b => b.Budget)
+                .HasForeignKey(f => f.IdVehicle);
 
             #endregion
 

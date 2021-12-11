@@ -153,6 +153,7 @@ namespace CarFix.Project.Repositories
             if(newServiceBudget.ServiceDescription != null)
             {
                 newService.ServiceDescription = newServiceBudget.ServiceDescription;
+                newService.ServiceStatus = Enum.EnServiceStatus.Pendente;
             }
             newService.IdServiceType = newServiceBudget.IdServiceType;
 

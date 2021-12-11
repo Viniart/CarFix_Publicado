@@ -45,8 +45,7 @@ namespace CarFix.Project.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdVehicle")
-                        .IsUnique();
+                    b.HasIndex("IdVehicle");
 
                     b.ToTable("Budgets");
                 });
@@ -227,8 +226,8 @@ namespace CarFix.Project.Migrations
             modelBuilder.Entity("CarFix.Project.Domains.Budget", b =>
                 {
                     b.HasOne("CarFix.Project.Domains.Vehicle", "Vehicle")
-                        .WithOne("Budget")
-                        .HasForeignKey("CarFix.Project.Domains.Budget", "IdVehicle")
+                        .WithMany("Budget")
+                        .HasForeignKey("IdVehicle")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

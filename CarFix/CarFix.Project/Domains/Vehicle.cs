@@ -18,6 +18,6 @@ namespace CarFix.Project.Domains
         public Guid? IdUser { get; set; }
         public virtual User? User { get; set; }
 
-        public virtual Budget? Budget { get; set; }
+        public ICollection<Budget> Budget { get; set; }
     }
 }

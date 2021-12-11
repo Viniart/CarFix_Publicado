@@ -26,7 +26,7 @@ namespace CarFix.Project
         public void ConfigureServices(IServiceCollection services)
         {
             //var connectionString = ConfigurationManager.ConnectionStrings["LocalConnectionString"].ConnectionString;
-            services.AddDbContext<CarFixContext>(options => options.UseSqlServer("Data Source = g19-database.cl3us3tplwnh.us-east-1.rds.amazonaws.com; Initial Catalog=CarFix; user=admin; pwd=Senai-132"));
+            services.AddDbContext<CarFixContext>(options => options.UseSqlServer("Data Source = g19-bancodedados.cl3us3tplwnh.us-east-1.rds.amazonaws.com; Initial Catalog=CarFix; user=admin; pwd=Senai-132"));
             //services.AddDbContext<CarFixContext>(options => options.UseSqlServer("Data Source = DEV22\\SQLEXPRESS; Initial Catalog=CarFixDef; user=sa; pwd=sa@132"));
 
             services.AddControllers()
@@ -120,17 +120,17 @@ namespace CarFix.Project
 
             app.UseAuthorization();
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider("/var/netcore/Images"),
-                RequestPath = "/Images"
-            });
-
             //app.UseStaticFiles(new StaticFileOptions
             //{
-            //    FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Images")),
+            //    FileProvider = new PhysicalFileProvider("/var/netcore/Images"),
             //    RequestPath = "/Images"
             //});
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Images")),
+                RequestPath = "/Images"
+            });
 
             app.UseEndpoints(endpoints =>
             {

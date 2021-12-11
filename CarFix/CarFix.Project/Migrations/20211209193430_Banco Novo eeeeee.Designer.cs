@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarFix.Project.Migrations
 {
     [DbContext(typeof(CarFixContext))]
-    [Migration("20211116180524_Mudanca tamanho de imagem")]
-    partial class Mudancatamanhodeimagem
+    [Migration("20211209193430_Banco Novo eeeeee")]
+    partial class BancoNovoeeeeee
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,8 +47,7 @@ namespace CarFix.Project.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdVehicle")
-                        .IsUnique();
+                    b.HasIndex("IdVehicle");
 
                     b.ToTable("Budgets");
                 });
@@ -229,8 +228,8 @@ namespace CarFix.Project.Migrations
             modelBuilder.Entity("CarFix.Project.Domains.Budget", b =>
                 {
                     b.HasOne("CarFix.Project.Domains.Vehicle", "Vehicle")
-                        .WithOne("Budget")
-                        .HasForeignKey("CarFix.Project.Domains.Budget", "IdVehicle")
+                        .WithMany("Budget")
+                        .HasForeignKey("IdVehicle")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

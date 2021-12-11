@@ -77,29 +77,24 @@ namespace CarFix.Project.Controllers
             {
                 Upload up = new();
 
-                string[] imagens = new string[Request.Form.Files.Count];
+                var imagem = up.UploadFile(Request.Form.Files[0]);
 
-                for (int i = 0; i < Request.Form.Files.Count; i++)
+                if(!imagem.Equals("Invalid File Type"))
                 {
-                    var imagem = up.UploadFile(Request.Form.Files[i]);
-                    imagens[i] = imagem;
+                    ServiceImage newServiceImage = new();
 
-                    if(!imagens[i].Equals("Invalid File Type"))
-                    {
-                        ServiceImage newServiceImage = new();
-
-                        newServiceImage.IdService = newServiceImageForm.IdService;
-                        newServiceImage.ImagePath = imagem;
-                        _unitOfWork.ServiceImageRepository.Register(newServiceImage);
-                        _unitOfWork.Save();
-                    }
-                    else
-                    {
-                        return BadRequest("Arquivo Inválido");
-                    }
+                    newServiceImage.IdService = newServiceImageForm.IdService;
+                    newServiceImage.ImagePath = imagem;
+                    _unitOfWork.ServiceImageRepository.Register(newServiceImage);
+                    _unitOfWork.Save();
                 }
+                else
+                {
+                    return BadRequest("Arquivo Inválido");
+                }
+                
 
-                return Ok(imagens);
+                return Ok(imagem);
 
             }
 

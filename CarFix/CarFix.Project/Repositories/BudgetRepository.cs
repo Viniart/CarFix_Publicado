@@ -37,7 +37,7 @@ namespace CarFix.Project.Repositories
             return c_Context.Budgets
                 .Include(x => x.Vehicle)
                 .Include(x => x.Services)
-                .FirstOrDefault(x => x.Id == idVehicle);
+                .FirstOrDefault(x => x.IdVehicle == idVehicle);
         }
 
         public List<Budget> ListActiveBudgets()

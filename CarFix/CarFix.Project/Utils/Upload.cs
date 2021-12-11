@@ -18,9 +18,9 @@ namespace CarFix.Project.Utils
                 var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
                 var fileExtension = Path.GetExtension(file.FileName);
                 
-                if(fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".jfif" 
-                || fileExtension == ".png" || fileExtension == ".svg")
-                {
+                //if(fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".jfif" 
+                //|| fileExtension == ".png" || fileExtension == ".svg")
+                //{
                     if (file.Length > 0)
                     {
                         var fileName = new string(Path.GetFileNameWithoutExtension(file.FileName).ToArray()).Replace(' ', '-');
@@ -40,11 +40,11 @@ namespace CarFix.Project.Utils
                     {
                         return "Invalid File";
                     }
-                }
-                else
-                {
-                    return "Invalid File Type";
-                }
+                //}
+                //else
+                //{
+                //    return "Invalid File Type";
+                //}
 
             }
             catch (Exception ex)

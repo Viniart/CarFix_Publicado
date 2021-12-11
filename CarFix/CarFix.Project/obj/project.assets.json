@@ -5744,11 +5744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\37529671880\\Desktop\\API-19\\CarFix_Public\\CarFix\\CarFix.Project\\CarFix.Project.csproj",
+      "projectUniqueName": "C:\\Users\\37529671880\\Desktop\\API-BancoNovo\\CarFix_Public\\CarFix\\CarFix.Project\\CarFix.Project.csproj",
       "projectName": "CarFix.Project",
-      "projectPath": "C:\\Users\\37529671880\\Desktop\\API-19\\CarFix_Public\\CarFix\\CarFix.Project\\CarFix.Project.csproj",
+      "projectPath": "C:\\Users\\37529671880\\Desktop\\API-BancoNovo\\CarFix_Public\\CarFix\\CarFix.Project\\CarFix.Project.csproj",
       "packagesPath": "C:\\Users\\37529671880\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\37529671880\\Desktop\\API-19\\CarFix_Public\\CarFix\\CarFix.Project\\obj\\",
+      "outputPath": "C:\\Users\\37529671880\\Desktop\\API-BancoNovo\\CarFix_Public\\CarFix\\CarFix.Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

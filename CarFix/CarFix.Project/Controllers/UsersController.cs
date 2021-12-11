@@ -110,10 +110,19 @@ namespace CarFix.Project.Controllers
         {
             try
             {
-                string idJti = User.Claims.First(t => t.Type == JwtRegisteredClaimNames.Jti).Value;
-                Guid idFinal = Guid.Parse(idJti);
+                if(User.Claims.FirstOrDefault(t => t.Type == JwtRegisteredClaimNames.Jti) != null)
+                {
+                    string? idJti = User.Claims.First(t => t.Type == JwtRegisteredClaimNames.Jti).Value;
+                    Guid idFinal = Guid.Parse(idJti);
+                    if(idJti != null)
+                    {
+                        if(idFinal != Guid.Empty)
+                        {
+                            userUpdated.UserId = idFinal;
+                        }
+                    }
+                }
 
-                userUpdated.UserId = idFinal;
 
                 _unitOfWork.UserRepository.Update(userUpdated);
                 _unitOfWork.Save();
