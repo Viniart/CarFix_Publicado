@@ -201,3 +201,6 @@ C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\o
 C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\obj\Debug\net5.0\ref\CarFix.Project.dll
 C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\obj\Debug\net5.0\CarFix.Project.pdb
 C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\obj\Debug\net5.0\CarFix.Project.genruntimeconfig.cache
+C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\bin\Debug\net5.0\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\bin\Debug\net5.0\Microsoft.Rest.ClientRuntime.dll
+C:\Users\37529671880\Desktop\API-BancoNovo\CarFix_Public\CarFix\CarFix.Project\bin\Debug\net5.0\Microsoft.Rest.ClientRuntime.Azure.dll
